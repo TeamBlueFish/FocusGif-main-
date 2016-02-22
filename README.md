@@ -1,2 +1,2 @@
 # FocusGif
-Основной, единственный репозиторий.
+Just Repository
