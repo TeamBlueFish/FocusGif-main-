@@ -1,2 +1,2 @@
 # FocusGif
-Just Repository
+Hi! This file for amendments
