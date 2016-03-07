@@ -135,6 +135,11 @@ namespace FocusGif
         {
             SizePen = 10;
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Многого хочешь", "Упс", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
     }
 
     

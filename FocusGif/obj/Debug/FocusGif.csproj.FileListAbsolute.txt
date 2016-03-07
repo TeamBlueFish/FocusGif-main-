@@ -6,3 +6,4 @@ c:\users\анастасия\documents\visual studio 2012\Projects\FocusGif\Focus
 c:\users\анастасия\documents\visual studio 2012\Projects\FocusGif\FocusGif\obj\Debug\FocusGif.csproj.GenerateResource.Cache
 c:\users\анастасия\documents\visual studio 2012\Projects\FocusGif\FocusGif\obj\Debug\FocusGif.exe
 c:\users\анастасия\documents\visual studio 2012\Projects\FocusGif\FocusGif\obj\Debug\FocusGif.pdb
+C:\Users\Анастасия\documents\visual studio 2012\Projects\FocusGif\FocusGif\obj\Debug\FocusGif.csprojResolveAssemblyReference.cache
