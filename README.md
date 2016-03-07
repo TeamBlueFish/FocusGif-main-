@@ -1,2 +1,0 @@
-# FocusGif
-Just Repository
