@@ -1,0 +1,8 @@
+c:\users\анастасия\documents\visual studio 2012\Projects\FocusGif\FocusGif\bin\Debug\FocusGif.exe.config
+c:\users\анастасия\documents\visual studio 2012\Projects\FocusGif\FocusGif\bin\Debug\FocusGif.exe
+c:\users\анастасия\documents\visual studio 2012\Projects\FocusGif\FocusGif\bin\Debug\FocusGif.pdb
+c:\users\анастасия\documents\visual studio 2012\Projects\FocusGif\FocusGif\obj\Debug\FocusGif.Form1.resources
+c:\users\анастасия\documents\visual studio 2012\Projects\FocusGif\FocusGif\obj\Debug\FocusGif.Properties.Resources.resources
+c:\users\анастасия\documents\visual studio 2012\Projects\FocusGif\FocusGif\obj\Debug\FocusGif.csproj.GenerateResource.Cache
+c:\users\анастасия\documents\visual studio 2012\Projects\FocusGif\FocusGif\obj\Debug\FocusGif.exe
+c:\users\анастасия\documents\visual studio 2012\Projects\FocusGif\FocusGif\obj\Debug\FocusGif.pdb
