@@ -30,7 +30,7 @@
         {
             this.button1 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
+            this.Стерка = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
@@ -55,7 +55,7 @@
             // 
             // button4
             // 
-            this.button4.Font = new System.Drawing.Font("Chiller", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.Location = new System.Drawing.Point(246, 12);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(53, 52);
@@ -63,15 +63,15 @@
             this.button4.Text = "Э";
             this.button4.UseVisualStyleBackColor = true;
             // 
-            // button7
+            // Стерка
             // 
-            this.button7.Image = global::FocusGif.Properties.Resources.w128h1281338911586eraser1;
-            this.button7.Location = new System.Drawing.Point(828, 84);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(36, 36);
-            this.button7.TabIndex = 7;
-            this.button7.UseVisualStyleBackColor = true;
-            this.button7.Click += new System.EventHandler(this.button7_Click);
+            this.Стерка.Image = global::FocusGif.Properties.Resources.w128h1281338911586eraser1;
+            this.Стерка.Location = new System.Drawing.Point(828, 84);
+            this.Стерка.Name = "Стерка";
+            this.Стерка.Size = new System.Drawing.Size(36, 36);
+            this.Стерка.TabIndex = 7;
+            this.Стерка.UseVisualStyleBackColor = true;
+            this.Стерка.Click += new System.EventHandler(this.Стерка_Click);
             // 
             // button6
             // 
@@ -172,7 +172,7 @@
             this.Controls.Add(this.button10);
             this.Controls.Add(this.button9);
             this.Controls.Add(this.button8);
-            this.Controls.Add(this.button7);
+            this.Controls.Add(this.Стерка);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
@@ -196,7 +196,7 @@
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button Стерка;
         private System.Windows.Forms.ColorDialog colorDialog1;
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Button button9;

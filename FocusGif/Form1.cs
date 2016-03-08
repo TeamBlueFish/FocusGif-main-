@@ -17,9 +17,9 @@ namespace FocusGif
         Point CurrentPoint;
         Point PrevPoint;
         bool isPressed;
-        bool ColPen = false;
+        bool colorPen = false;
         Graphics g;
-        int SizePen;
+        int sizePen;
         public Form1()
         {
             InitializeComponent();
@@ -30,17 +30,17 @@ namespace FocusGif
         {
             if (isPressed)
             {
-                if (!ColPen)
+                if (!colorPen)
                 {
                     PrevPoint = CurrentPoint;
                     CurrentPoint = e.Location;
-                    paint();
+                    Paint();
                 }
                 else
                 {
                     PrevPoint = CurrentPoint;
                     CurrentPoint = e.Location;
-                    paintLastic();
+                    PaintLastic();
                 }
             }
         }
@@ -67,10 +67,10 @@ namespace FocusGif
         isPressed = false;
         }
 
-        private void paint()
+        private void Paint()
         {
             Pen p = new Pen(CurrentColor);
-            switch (SizePen)
+            switch (sizePen)
             {
                 case 1:
                     p = new Pen(CurrentColor, 1);
@@ -86,10 +86,10 @@ namespace FocusGif
             g.DrawLine(p, PrevPoint, CurrentPoint);
         }
 
-        private void paintLastic()
+        private void PaintLastic()
         {
             Pen pe = new Pen(LasticColor);
-            switch (SizePen)
+            switch (sizePen)
             {
                 case 1:
                     pe = new Pen(LasticColor, 1);
@@ -104,14 +104,14 @@ namespace FocusGif
             g.DrawLine(pe, PrevPoint, CurrentPoint);
         }
 
-        private void button7_Click(object sender, EventArgs e)
+        private void Стерка_Click(object sender, EventArgs e)
         {
-            ColPen = true;
+            colorPen = true;
         }
 
         private void button6_Click(object sender, EventArgs e)
         {
-            ColPen = false;
+            colorPen = false;
         }
 
         private void button8_Click(object sender, EventArgs e)
@@ -123,17 +123,17 @@ namespace FocusGif
 
         private void button9_Click(object sender, EventArgs e)
         {
-            SizePen = 1;
+            sizePen = 1;
         }
 
         private void button10_Click(object sender, EventArgs e)
         {
-            SizePen = 5;
+            sizePen = 5;
         }
 
         private void button11_Click(object sender, EventArgs e)
         {
-            SizePen = 10;
+            sizePen = 10;
         }
 
         private void button5_Click(object sender, EventArgs e)
