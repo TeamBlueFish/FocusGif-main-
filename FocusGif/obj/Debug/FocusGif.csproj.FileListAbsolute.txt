@@ -7,3 +7,12 @@ c:\users\анастасия\documents\visual studio 2012\Projects\FocusGif\Focus
 c:\users\анастасия\documents\visual studio 2012\Projects\FocusGif\FocusGif\obj\Debug\FocusGif.exe
 c:\users\анастасия\documents\visual studio 2012\Projects\FocusGif\FocusGif\obj\Debug\FocusGif.pdb
 C:\Users\Анастасия\documents\visual studio 2012\Projects\FocusGif\FocusGif\obj\Debug\FocusGif.csprojResolveAssemblyReference.cache
+C:\Users\JH.DGM-VH\Documents\GitHub\FocusGif\FocusGif\bin\Debug\FocusGif.exe.config
+C:\Users\JH.DGM-VH\Documents\GitHub\FocusGif\FocusGif\obj\Debug\FocusGif.exe
+C:\Users\JH.DGM-VH\Documents\GitHub\FocusGif\FocusGif\obj\Debug\FocusGif.pdb
+C:\Users\JH.DGM-VH\Documents\GitHub\FocusGif\FocusGif\bin\Debug\FocusGif.exe
+C:\Users\JH.DGM-VH\Documents\GitHub\FocusGif\FocusGif\bin\Debug\FocusGif.pdb
+C:\Users\JH.DGM-VH\Documents\GitHub\FocusGif\FocusGif\obj\Debug\FocusGif.csprojResolveAssemblyReference.cache
+C:\Users\JH.DGM-VH\Documents\GitHub\FocusGif\FocusGif\obj\Debug\FocusGif.Form1.resources
+C:\Users\JH.DGM-VH\Documents\GitHub\FocusGif\FocusGif\obj\Debug\FocusGif.Properties.Resources.resources
+C:\Users\JH.DGM-VH\Documents\GitHub\FocusGif\FocusGif\obj\Debug\FocusGif.csproj.GenerateResource.Cache
