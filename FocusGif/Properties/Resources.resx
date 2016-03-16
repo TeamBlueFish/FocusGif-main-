@@ -118,28 +118,37 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="filesave_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\filesave_1.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="paintcan_7788" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\paintcan_7788.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="pencil041" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pencil041.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="inode-directory" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\inode-directory.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="editFile1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\editFile1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="w128h1281338911586eraser1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\w128h1281338911586eraser1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="filesave_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\filesave_1.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="w128h1281338911586eraser" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\w128h1281338911586eraser.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="filesave_4813" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\filesave_4813.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="inode-directory" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\inode-directory.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="pencil04" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pencil04.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="w128h1281338911586eraser1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\w128h1281338911586eraser1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="paintcan_7788" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\paintcan_7788.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="filesave_4813" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\filesave_4813.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="editFile" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\editFile.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="editF" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\editF.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

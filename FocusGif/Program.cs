@@ -16,7 +16,7 @@ namespace FocusGif
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FocusGif());
+            Application.Run(new Form1());
         }
     }
 }

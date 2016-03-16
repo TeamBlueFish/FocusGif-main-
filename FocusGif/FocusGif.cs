@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace FocusGif
 {
-    public partial class FocusGif : Form
+    public partial class Form1 : Form
     {
         int x1;
         int y1;
@@ -24,11 +24,20 @@ namespace FocusGif
         bool MouseD;
         Graphics g;
         int sizePen;
-        public FocusGif()
+        public Form1()
         {
             InitializeComponent();
             snapshot = new Bitmap(pictureBox1.Width, pictureBox1.Height);
             button8.BackColor = Color.Black;
+            for (int x = 0; x < snapshot.Width; x++)
+            {
+                for (int y = 0; y < snapshot.Height; y++)
+                {
+                    Color pixelColor = snapshot.GetPixel(x, y);
+                    Color newColor = Color.FromArgb(255, 255, 255);
+                    snapshot.SetPixel(x, y, newColor);
+                }
+            }
         }
 
         private void pictureBox1_MouseMove(object sender, MouseEventArgs e)
@@ -166,6 +175,23 @@ namespace FocusGif
             button9.Enabled = true;
             button10.Enabled = true;
             button11.Enabled = true;
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            SaveFileDialog sfd = new SaveFileDialog();
+            sfd.DefaultExt = "bmp";
+            sfd.Filter = "Image files (*.bmp)|*.bmp|All files (*.*)|*.*";
+            if (sfd.ShowDialog() == DialogResult.OK)
+
+                snapshot.Save(sfd.FileName, System.Drawing.Imaging.ImageFormat.Bmp);
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog open_dialog = new OpenFileDialog();
+            DialogResult dr = open_dialog.ShowDialog();
+            open_dialog.Filter = "Image Files(*.BMP;*.JPG;*.GIF;*.PNG)|*.BMP;*.JPG;*.GIF;*.PNG|All files (*.*)|*.*";
         }
     }
 
