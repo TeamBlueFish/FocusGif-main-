@@ -225,10 +225,11 @@
             // button12
             // 
             this.button12.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.button12.Enabled = false;
             this.button12.Font = new System.Drawing.Font("Goudy Stout", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button12.Location = new System.Drawing.Point(141, 657);
+            this.button12.Location = new System.Drawing.Point(111, 657);
             this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(92, 142);
+            this.button12.Size = new System.Drawing.Size(92, 115);
             this.button12.TabIndex = 14;
             this.button12.Text = "+";
             this.button12.UseVisualStyleBackColor = false;
@@ -283,9 +284,9 @@
             // 
             this.flowLayoutPanel1.AutoScroll = true;
             this.flowLayoutPanel1.BackColor = System.Drawing.Color.White;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(239, 657);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(209, 657);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(731, 142);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(761, 112);
             this.flowLayoutPanel1.TabIndex = 16;
             this.flowLayoutPanel1.WrapContents = false;
             // 
@@ -303,8 +304,9 @@
             // button17
             // 
             this.button17.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.button17.Enabled = false;
             this.button17.Font = new System.Drawing.Font("Ravie", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button17.Location = new System.Drawing.Point(141, 805);
+            this.button17.Location = new System.Drawing.Point(113, 770);
             this.button17.Name = "button17";
             this.button17.Size = new System.Drawing.Size(90, 61);
             this.button17.TabIndex = 17;
@@ -314,7 +316,7 @@
             // 
             // trackBar1
             // 
-            this.trackBar1.Location = new System.Drawing.Point(239, 810);
+            this.trackBar1.Location = new System.Drawing.Point(209, 775);
             this.trackBar1.Maximum = 1000;
             this.trackBar1.Minimum = 10;
             this.trackBar1.Name = "trackBar1";
@@ -345,6 +347,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
             this.Text = "FocusGif";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);

@@ -207,6 +207,8 @@ namespace FocusGif
             button9.Enabled = true;
             button10.Enabled = true;
             button11.Enabled = true;
+            button12.Enabled = true;
+            button17.Enabled = true;
             createProject();
         }
 
@@ -350,6 +352,18 @@ namespace FocusGif
                 pictureBox2.Visible = false;
                 pictureBox1.Visible = true;
 
+            }
+        }
+
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (createProjectS == 1)
+            {
+                if (MessageBox.Show("Проект не сохранен! Выйти без сохранения?", "Упс",
+                   MessageBoxButtons.YesNo) == DialogResult.No)
+                {
+                    e.Cancel = true;
+                }
             }
         }
     }
