@@ -20,7 +20,7 @@ namespace FocusGif
         Color LasticColor = Color.White;
         Bitmap snapshot;
         Bitmap tempDraw;
-        bool MouseD;
+        bool MouseD, OffOn = false;
         Graphics g;
         int sizePen;
         int nomerKadra = 0, nomerKadra2 = 0, createProjectS = 0;
@@ -309,6 +309,48 @@ namespace FocusGif
             tempDraw = (Bitmap)snapshot.Clone();
             pictureBox1.Image = bitMapList[nomerKadra];
             createButtonForKadr();
+        }
+
+        int currentImage = 0;
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            pictureBox2.Image = bitMapList[currentImage];
+            currentImage++;
+            if (currentImage > nomerKadra2)
+            {
+                currentImage = 0;
+            }
+        }
+
+        private void trackBar1_Scroll(object sender, EventArgs e)
+        {
+            timer1.Interval = trackBar1.Value;
+        }
+
+        private void button17_Click(object sender, EventArgs e)
+        {
+            if (OffOn == false)
+            {
+                timer1.Enabled = true;
+                OffOn = true;
+                pictureBox2.Width = pictureBox1.Width;
+                pictureBox2.Height = pictureBox1.Height;
+                pictureBox2.Left = pictureBox1.Left;
+                pictureBox2.BorderStyle = pictureBox1.BorderStyle;
+                pictureBox2.Top = pictureBox1.Top;
+                pictureBox2.Visible = true;
+                pictureBox1.Visible = false;
+                //Добавляем элемент на форму.
+                this.Controls.Add(pictureBox2);
+            }
+            else
+            {
+                timer1.Enabled = false;
+                OffOn = false;
+                pictureBox2.Visible = false;
+                pictureBox1.Visible = true;
+
+            }
         }
     }
 
