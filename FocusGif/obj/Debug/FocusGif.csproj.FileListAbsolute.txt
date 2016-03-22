@@ -25,3 +25,4 @@ C:\Users\dns\Documents\GitHub\FocusGifDelete\FocusGif\obj\Debug\FocusGif.pdb
 C:\Users\dns\Documents\GitHub\FocusGifDelete\FocusGif\bin\Debug\FocusGif.pdb
 C:\Users\dns\Documents\GitHub\FocusGifDelete\FocusGif\obj\Debug\FocusGif.csprojResolveAssemblyReference.cache
 C:\Users\dns\Documents\GitHub\FocusGifDelete\FocusGif\obj\Debug\FocusGif.Form1.resources
+C:\Users\dns\Documents\GitHub\FocusGifDelete\FocusGif\bin\Debug\Gif.Components.dll

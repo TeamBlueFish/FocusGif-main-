@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Gif.Components;
 
 namespace FocusGif
 {
@@ -271,17 +272,31 @@ namespace FocusGif
             pictureBox1.Image = bitMapList[inKadra];
 
         }
-
+        string path;
         private void button3_Click(object sender, EventArgs e)
         {
             SaveFileDialog sfd = new SaveFileDialog();
-            sfd.DefaultExt = "bmp";
-            sfd.Filter = "Image files (*.bmp)|*.bmp|All files (*.*)|*.*";
+            sfd.DefaultExt = "gif";
+            sfd.Filter = "Image Files(*.gif)|*.GIF|All files (*.*)|*.*"; 
             if (sfd.ShowDialog() == DialogResult.OK)
-
-                snapshot.Save(sfd.FileName, System.Drawing.Imaging.ImageFormat.Bmp);
+            {
+                path = sfd.FileName;
+                gif();
+            }
         }
 
+        private void gif()
+    {
+            AnimatedGifEncoder gif = new AnimatedGifEncoder();
+            gif.Start(path);
+            gif.SetDelay(500);   
+            gif.SetRepeat(0);
+            for (int i = 0, count = nomerKadra2 + 1; i < count; i++)
+            {
+                gif.AddFrame(bitMapList[i]);
+            }
+            gif.Finish();
+    }
         private void button2_Click(object sender, EventArgs e)
         {
             OpenFileDialog open_dialog = new OpenFileDialog();

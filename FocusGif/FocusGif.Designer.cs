@@ -35,6 +35,10 @@
             this.button10 = new System.Windows.Forms.Button();
             this.button11 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button9 = new System.Windows.Forms.Button();
             this.button12 = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.button16 = new System.Windows.Forms.Button();
@@ -48,10 +52,6 @@
             this.trackBar1 = new System.Windows.Forms.TrackBar();
             this.button18 = new System.Windows.Forms.Button();
             this.button19 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
@@ -124,6 +124,55 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(337, 145);
             this.panel1.TabIndex = 12;
+            // 
+            // button6
+            // 
+            this.button6.Enabled = false;
+            this.button6.Image = global::FocusGif.Properties.Resources.pencil041;
+            this.button6.Location = new System.Drawing.Point(27, 15);
+            this.button6.Margin = new System.Windows.Forms.Padding(4);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(50, 50);
+            this.button6.TabIndex = 6;
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
+            // button7
+            // 
+            this.button7.Enabled = false;
+            this.button7.Image = global::FocusGif.Properties.Resources.w128h1281338911586eraser1;
+            this.button7.Location = new System.Drawing.Point(111, 15);
+            this.button7.Margin = new System.Windows.Forms.Padding(4);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(50, 50);
+            this.button7.TabIndex = 7;
+            this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
+            // 
+            // button5
+            // 
+            this.button5.Enabled = false;
+            this.button5.Image = global::FocusGif.Properties.Resources.paintcan_7788;
+            this.button5.Location = new System.Drawing.Point(193, 15);
+            this.button5.Margin = new System.Windows.Forms.Padding(4);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(50, 50);
+            this.button5.TabIndex = 5;
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
+            // button9
+            // 
+            this.button9.Enabled = false;
+            this.button9.Image = global::FocusGif.Properties.Resources.editF;
+            this.button9.Location = new System.Drawing.Point(111, 102);
+            this.button9.Margin = new System.Windows.Forms.Padding(4);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(30, 30);
+            this.button9.TabIndex = 9;
+            this.button9.Text = "1";
+            this.button9.UseVisualStyleBackColor = true;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
             // button12
             // 
@@ -253,55 +302,6 @@
             this.button19.TabIndex = 20;
             this.button19.UseVisualStyleBackColor = true;
             this.button19.Click += new System.EventHandler(this.button19_Click);
-            // 
-            // button6
-            // 
-            this.button6.Enabled = false;
-            this.button6.Image = global::FocusGif.Properties.Resources.pencil041;
-            this.button6.Location = new System.Drawing.Point(27, 15);
-            this.button6.Margin = new System.Windows.Forms.Padding(4);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(50, 50);
-            this.button6.TabIndex = 6;
-            this.button6.UseVisualStyleBackColor = true;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
-            // 
-            // button7
-            // 
-            this.button7.Enabled = false;
-            this.button7.Image = global::FocusGif.Properties.Resources.w128h1281338911586eraser1;
-            this.button7.Location = new System.Drawing.Point(111, 15);
-            this.button7.Margin = new System.Windows.Forms.Padding(4);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(50, 50);
-            this.button7.TabIndex = 7;
-            this.button7.UseVisualStyleBackColor = true;
-            this.button7.Click += new System.EventHandler(this.button7_Click);
-            // 
-            // button5
-            // 
-            this.button5.Enabled = false;
-            this.button5.Image = global::FocusGif.Properties.Resources.paintcan_7788;
-            this.button5.Location = new System.Drawing.Point(193, 15);
-            this.button5.Margin = new System.Windows.Forms.Padding(4);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(50, 50);
-            this.button5.TabIndex = 5;
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
-            // 
-            // button9
-            // 
-            this.button9.Enabled = false;
-            this.button9.Image = global::FocusGif.Properties.Resources.editF;
-            this.button9.Location = new System.Drawing.Point(111, 102);
-            this.button9.Margin = new System.Windows.Forms.Padding(4);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(30, 30);
-            this.button9.TabIndex = 9;
-            this.button9.Text = "1";
-            this.button9.UseVisualStyleBackColor = true;
-            this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
             // button3
             // 
