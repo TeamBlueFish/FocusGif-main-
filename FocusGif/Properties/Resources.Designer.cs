@@ -123,6 +123,16 @@ namespace FocusGif.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap korzina {
+            get {
+                object obj = ResourceManager.GetObject("korzina", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap paintcan_7788 {
             get {
                 object obj = ResourceManager.GetObject("paintcan_7788", resourceCulture);

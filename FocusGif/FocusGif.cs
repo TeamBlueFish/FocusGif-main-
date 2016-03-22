@@ -193,6 +193,7 @@ namespace FocusGif
                         g.Dispose();
                         pictureBox1.Image = tempDraw;
                     }
+                    selectedTool = "kist";
                     break;
             }
         }
@@ -236,6 +237,7 @@ namespace FocusGif
                 bitMapList.Add(snapshot);
                 imageList1.Images.Add(snapshot);
                 createButtonForKadr();
+                pictureBox1.Image = snapshot;
             }
             else
             {
@@ -432,6 +434,31 @@ namespace FocusGif
                 int ser = but.TabIndex;
                 but.TabIndex = (ser - 1);
             }
+        }
+
+        private void button19_Click(object sender, EventArgs e)
+        {
+            for (int i = nomerKadra2; i > -1; i--)
+            {
+                nomerKadra = i;
+                Button btn = (Button)buttonKadr[i];
+                Bitmap kas = bitMapList[nomerKadra];
+                if (flowLayoutPanel1.Controls.Contains(btn))
+                {
+                    btn.Click -= new EventHandler(button_Click);
+                    flowLayoutPanel1.Controls.Remove(btn);
+                    btn.Dispose();
+                    imageList1.Images.RemoveAt(btn.TabIndex);
+                    bitMapList.Remove(kas);
+                    nomerKadra2--;
+                }
+            }
+
+
+            izmenenie_poryadka();
+            createProjectS = 0;
+            nomerKadra2 = 0;
+            createProject();
         }
     }
 
