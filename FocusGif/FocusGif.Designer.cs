@@ -54,6 +54,7 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.button17 = new System.Windows.Forms.Button();
             this.trackBar1 = new System.Windows.Forms.TrackBar();
+            this.button18 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -306,7 +307,7 @@
             this.button17.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.button17.Enabled = false;
             this.button17.Font = new System.Drawing.Font("Ravie", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button17.Location = new System.Drawing.Point(113, 770);
+            this.button17.Location = new System.Drawing.Point(113, 778);
             this.button17.Name = "button17";
             this.button17.Size = new System.Drawing.Size(90, 61);
             this.button17.TabIndex = 17;
@@ -316,7 +317,7 @@
             // 
             // trackBar1
             // 
-            this.trackBar1.Location = new System.Drawing.Point(209, 775);
+            this.trackBar1.Location = new System.Drawing.Point(209, 783);
             this.trackBar1.Maximum = 1000;
             this.trackBar1.Minimum = 10;
             this.trackBar1.Name = "trackBar1";
@@ -327,11 +328,26 @@
             this.trackBar1.Value = 100;
             this.trackBar1.Scroll += new System.EventHandler(this.trackBar1_Scroll);
             // 
+            // button18
+            // 
+            this.button18.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.button18.Enabled = false;
+            this.button18.Font = new System.Drawing.Font("Ravie", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button18.Location = new System.Drawing.Point(13, 657);
+            this.button18.Name = "button18";
+            this.button18.Size = new System.Drawing.Size(92, 115);
+            this.button18.TabIndex = 19;
+            this.button18.Text = "X";
+            this.button18.UseVisualStyleBackColor = false;
+            this.button18.Click += new System.EventHandler(this.button18_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.SlateGray;
             this.ClientSize = new System.Drawing.Size(1374, 948);
+            this.Controls.Add(this.button18);
             this.Controls.Add(this.trackBar1);
             this.Controls.Add(this.button17);
             this.Controls.Add(this.flowLayoutPanel1);
@@ -384,6 +400,7 @@
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Button button17;
         private System.Windows.Forms.TrackBar trackBar1;
+        private System.Windows.Forms.Button button18;
     }
 }
 

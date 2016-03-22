@@ -23,6 +23,7 @@ namespace FocusGif
         bool MouseD, OffOn = false;
         Graphics g;
         int sizePen;
+        object kadr;
         int nomerKadra = 0, nomerKadra2 = 0, createProjectS = 0;
         string selectedTool, selected;
         PictureBox pictureBox2 = new PictureBox();
@@ -190,6 +191,7 @@ namespace FocusGif
                             }
                         }
                         g.Dispose();
+                        pictureBox1.Image = tempDraw;
                     }
                     break;
             }
@@ -209,6 +211,7 @@ namespace FocusGif
             button11.Enabled = true;
             button12.Enabled = true;
             button17.Enabled = true;
+            button18.Enabled = true;
             createProject();
         }
 
@@ -255,7 +258,7 @@ namespace FocusGif
         void button_Click(object sender, EventArgs e)
         {
             Button button = (Button)sender;
-            //kadr = sender;
+            kadr = sender;
             bitMapList[nomerKadra] = tempDraw;
             imageList1.Images[nomerKadra] = new Bitmap(tempDraw, imageList1.ImageSize);
             buttonKadr[nomerKadra].Image = imageList1.Images[nomerKadra];
@@ -364,6 +367,70 @@ namespace FocusGif
                 {
                     e.Cancel = true;
                 }
+            }
+        }
+
+        private void button18_Click(object sender, EventArgs e)
+        {
+            Button btn = (Button)kadr;
+            if (nomerKadra2 != 0)
+            {
+                Bitmap kas = bitMapList[nomerKadra];
+                if (flowLayoutPanel1.Controls.Contains(btn))
+                {
+                    btn.Click -= new EventHandler(button_Click);
+                    flowLayoutPanel1.Controls.Remove(btn);
+                    btn.Dispose();
+                    imageList1.Images.RemoveAt(btn.TabIndex);
+                    bitMapList.Remove(kas);
+
+
+                    if (nomerKadra != 0)
+                    {
+                        nomerKadra2--;
+                        izmenenie_poryadka();
+                        nomerKadra = nomerKadra - 1;
+                        tempDraw = (Bitmap)bitMapList[nomerKadra].Clone();
+                        snapshot = (Bitmap)bitMapList[nomerKadra].Clone();
+                        pictureBox1.Image = tempDraw;
+                    }
+                    else
+                    {
+                        if (nomerKadra == nomerKadra2)
+                        {
+                            nomerKadra2--;
+                            nomerKadra = nomerKadra - 1;
+                            tempDraw = (Bitmap)bitMapList[nomerKadra].Clone();
+                            snapshot = (Bitmap)bitMapList[nomerKadra].Clone();
+                            pictureBox1.Image = tempDraw;
+                        }
+                        else
+                        {
+                            nomerKadra2--;
+                            izmenenie_poryadka();
+                            tempDraw = (Bitmap)bitMapList[nomerKadra].Clone();
+                            snapshot = (Bitmap)bitMapList[nomerKadra].Clone();
+                            pictureBox1.Image = tempDraw;
+                        }
+
+                    }
+
+                }
+            }
+        }
+
+        void izmenenie_poryadka()
+        {
+            for (int j = nomerKadra; j < (nomerKadra2 + 2); j++)
+            {
+                buttonKadr[j] = buttonKadr[j + 1];
+            }
+
+            for (int i = nomerKadra; i < (nomerKadra2 + 1); i++)
+            {
+                Button but = (Button)buttonKadr[i];
+                int ser = but.TabIndex;
+                but.TabIndex = (ser - 1);
             }
         }
     }
