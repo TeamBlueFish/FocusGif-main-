@@ -23,7 +23,6 @@ namespace FocusGif
         Bitmap snapshot;
         Bitmap tempDraw;
         bool MouseD, OffOn = false;
-        Graphics g;
         int sizePen, selectedTool;
         object kadr;
         int nomerKadra = 0, nomerKadra2 = 0, createProjectS = 0;
@@ -58,19 +57,25 @@ namespace FocusGif
                 m.MenuItems.Add(0, new MenuItem("Очистить", new EventHandler(RightMouseButton_Click)));
                 m.Show(this, new Point(e.X, e.Y));
             }
-            tempDraw = (Bitmap)snapshot.Clone();
-            x1 = e.X;
-            y1 = e.Y;
-            MouseD = true; 
+            else
+            {
+                x1 = e.X;
+                y1 = e.Y;
+                tempDraw = (Bitmap)snapshot.Clone();
+                MouseD = true;
+            }    
         }
 
         private void RightMouseButton_Click(object sender, EventArgs e)
         {
-            selectedTool = 5;
             if (tempDraw != null)
             {
                 Graphics g = Graphics.FromImage(tempDraw);
                 g.Clear(SystemColors.Window);
+                Graphics g2 = Graphics.FromImage(snapshot);
+                g2.Clear(SystemColors.Window);
+                pictureBox1.Invalidate();
+                pictureBox1.Update();
             }
         }
 
@@ -182,24 +187,6 @@ namespace FocusGif
                         y1 = y2;
                     }
                     break;
-                case 5:
-                    if (tempDraw != null)
-                    {
-                        Graphics g = Graphics.FromImage(tempDraw);
-                        //e.Graphics.Clear(Color.White);
-                        for (int x = 0; x < snapshot.Width; x++)
-                        {
-                            for (int y = 0; y < snapshot.Height; y++)
-                            {
-                                Color newColor = Color.FromArgb(255, 255, 255);
-                                tempDraw.SetPixel(x, y, newColor);
-                            }
-                        }
-                        g.Dispose();
-                        pictureBox1.Image = tempDraw;
-                    }
-                    selectedTool = 0;
-                    break;
             }
         }
 
@@ -258,6 +245,8 @@ namespace FocusGif
             Mutton.Image = imageList1.Images[nomerKadra];
             Mutton.Click += new EventHandler(button_Click);
             Mutton.TabIndex = nomerKadra;
+            Mutton.Text = (nomerKadra+1).ToString();
+            Mutton.TextAlign = ContentAlignment.TopRight;
             flowLayoutPanel1.Controls.Add(Mutton);
             buttonKadr[nomerKadra] = Mutton;
 
@@ -376,6 +365,7 @@ namespace FocusGif
                 OffOn = false;
                 pictureBox2.Visible = false;
                 pictureBox1.Visible = true;
+                currentImage = 0;
 
             }
         }
@@ -453,32 +443,38 @@ namespace FocusGif
                 Button but = (Button)buttonKadr[i];
                 int ser = but.TabIndex;
                 but.TabIndex = (ser - 1);
+                but.Text = (ser).ToString();
             }
         }
 
         private void button19_Click(object sender, EventArgs e)
         {
-            for (int i = nomerKadra2; i > -1; i--)
+            if (MessageBox.Show("Вы действительно хотите очистить полосу кадров?", "Упс",
+                   MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
-                nomerKadra = i;
-                Button btn = (Button)buttonKadr[i];
-                Bitmap kas = bitMapList[nomerKadra];
-                if (flowLayoutPanel1.Controls.Contains(btn))
+                for (int i = nomerKadra2; i > -1; i--)
                 {
-                    btn.Click -= new EventHandler(button_Click);
-                    flowLayoutPanel1.Controls.Remove(btn);
-                    btn.Dispose();
-                    imageList1.Images.RemoveAt(btn.TabIndex);
-                    bitMapList.Remove(kas);
-                    nomerKadra2--;
+                    nomerKadra = i;
+                    Button btn = (Button)buttonKadr[i];
+                    Bitmap kas = bitMapList[nomerKadra];
+                    if (flowLayoutPanel1.Controls.Contains(btn))
+                    {
+                        btn.Click -= new EventHandler(button_Click);
+                        flowLayoutPanel1.Controls.Remove(btn);
+                        btn.Dispose();
+                        imageList1.Images.RemoveAt(btn.TabIndex);
+                        bitMapList.Remove(kas);
+                        nomerKadra2--;
+                    }
                 }
+
+
+                izmenenie_poryadka();
+                createProjectS = 0;
+                nomerKadra2 = 0;
+                createProject();
             }
-
-
-            izmenenie_poryadka();
-            createProjectS = 0;
-            nomerKadra2 = 0;
-            createProject();
+            
         }
     }
 
