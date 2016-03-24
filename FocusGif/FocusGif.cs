@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Gif.Components;
+using System.Drawing.Drawing2D;
 
 namespace FocusGif
 {
@@ -23,10 +24,9 @@ namespace FocusGif
         Bitmap tempDraw;
         bool MouseD, OffOn = false;
         Graphics g;
-        int sizePen;
+        int sizePen, selectedTool;
         object kadr;
         int nomerKadra = 0, nomerKadra2 = 0, createProjectS = 0;
-        string selectedTool, selected;
         PictureBox pictureBox2 = new PictureBox();
         PictureBox pictureBox3 = new PictureBox();
         PictureBox pictureBox4 = new PictureBox();
@@ -66,7 +66,7 @@ namespace FocusGif
 
         private void RightMouseButton_Click(object sender, EventArgs e)
         {
-            selectedTool = "Clean";
+            selectedTool = 5;
             if (tempDraw != null)
             {
                 Graphics g = Graphics.FromImage(tempDraw);
@@ -85,12 +85,12 @@ namespace FocusGif
 
         private void button7_Click(object sender, EventArgs e)
         {
-            selectedTool = "sterka";
+            selectedTool = 1;
         }
 
         private void button6_Click(object sender, EventArgs e)
         {
-            selectedTool = "kist";
+            selectedTool = 0;
         }
 
         private void button8_Click(object sender, EventArgs e)
@@ -126,11 +126,12 @@ namespace FocusGif
         {
             switch (selectedTool)
             {
-                case "kist":
+                case 0:
                     if (tempDraw != null)
                     {
                         Graphics g = Graphics.FromImage(tempDraw);
                         Pen p = new Pen(CurrentColor);
+                        g.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
                         switch (sizePen)
                         {
                             case 1:
@@ -143,7 +144,8 @@ namespace FocusGif
                                 p = new Pen(CurrentColor, 10);
                                 break;
                         }
-
+                        p.StartCap = p.EndCap = LineCap.Round;
+                        p.Alignment = PenAlignment.Inset;
                         g.DrawLine(p, x1, y1, x2, y2);
                         p.Dispose();
                         e.Graphics.DrawImageUnscaled(tempDraw, 0, 0);
@@ -152,11 +154,12 @@ namespace FocusGif
                         y1 = y2;
                     }
                     break;
-                case "sterka":
+                case 1:
                     if (tempDraw != null)
                     {
                         Graphics g = Graphics.FromImage(tempDraw);
                         Pen p2 = new Pen(LasticColor);
+                        g.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
                         switch (sizePen)
                         {
                             case 1:
@@ -169,7 +172,8 @@ namespace FocusGif
                                 p2 = new Pen(LasticColor, 10);
                                 break;
                         }
-
+                        p2.StartCap = p2.EndCap = LineCap.Round;
+                        p2.Alignment = PenAlignment.Inset;
                         g.DrawLine(p2, x1, y1, x2, y2);
                         p2.Dispose();
                         e.Graphics.DrawImageUnscaled(tempDraw, 0, 0);
@@ -178,7 +182,7 @@ namespace FocusGif
                         y1 = y2;
                     }
                     break;
-                case "Clean":
+                case 5:
                     if (tempDraw != null)
                     {
                         Graphics g = Graphics.FromImage(tempDraw);
@@ -194,7 +198,7 @@ namespace FocusGif
                         g.Dispose();
                         pictureBox1.Image = tempDraw;
                     }
-                    selectedTool = "kist";
+                    selectedTool = 0;
                     break;
             }
         }
@@ -237,6 +241,7 @@ namespace FocusGif
 
                 bitMapList.Add(snapshot);
                 imageList1.Images.Add(snapshot);
+                tempDraw = (Bitmap)snapshot.Clone();
                 createButtonForKadr();
                 pictureBox1.Image = snapshot;
             }
