@@ -31,7 +31,6 @@
             this.components = new System.ComponentModel.Container();
             this.button4 = new System.Windows.Forms.Button();
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
-            this.button8 = new System.Windows.Forms.Button();
             this.button10 = new System.Windows.Forms.Button();
             this.button11 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -56,6 +55,7 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
@@ -73,19 +73,6 @@
             this.button4.TabIndex = 4;
             this.button4.Text = "Э";
             this.button4.UseVisualStyleBackColor = true;
-            // 
-            // button8
-            // 
-            this.button8.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.button8.Enabled = false;
-            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button8.Location = new System.Drawing.Point(27, 82);
-            this.button8.Margin = new System.Windows.Forms.Padding(4);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(50, 50);
-            this.button8.TabIndex = 8;
-            this.button8.UseVisualStyleBackColor = true;
-            this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
             // button10
             // 
@@ -113,13 +100,13 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.button6);
             this.panel1.Controls.Add(this.button11);
             this.panel1.Controls.Add(this.button7);
             this.panel1.Controls.Add(this.button10);
             this.panel1.Controls.Add(this.button5);
             this.panel1.Controls.Add(this.button9);
-            this.panel1.Controls.Add(this.button8);
             this.panel1.Location = new System.Drawing.Point(1016, 103);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(337, 145);
@@ -353,6 +340,16 @@
             this.pictureBox1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseMove);
             this.pictureBox1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseUp);
             // 
+            // label1
+            // 
+            this.label1.BackColor = System.Drawing.Color.Black;
+            this.label1.Location = new System.Drawing.Point(27, 82);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(50, 50);
+            this.label1.TabIndex = 21;
+            this.label1.BackColorChanged += new System.EventHandler(this.label1_BackColorChanged);
+            this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -397,7 +394,6 @@
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.ColorDialog colorDialog1;
-        private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Button button10;
         private System.Windows.Forms.Button button11;
@@ -415,6 +411,7 @@
         private System.Windows.Forms.TrackBar trackBar1;
         private System.Windows.Forms.Button button18;
         private System.Windows.Forms.Button button19;
+        private System.Windows.Forms.Label label1;
     }
 }
 

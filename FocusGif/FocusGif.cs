@@ -63,7 +63,13 @@ namespace FocusGif
                 y1 = e.Y;
                 tempDraw = (Bitmap)snapshot.Clone();
                 MouseD = true;
-            }    
+            }
+            if (Control.ModifierKeys == Keys.Alt)
+            {
+                Color c = (tempDraw).GetPixel(e.X, e.Y);
+                if (e.Button == MouseButtons.Left)
+                    label1.BackColor = c;
+            }
         }
 
         private void RightMouseButton_Click(object sender, EventArgs e)
@@ -76,6 +82,7 @@ namespace FocusGif
                 g2.Clear(SystemColors.Window);
                 pictureBox1.Invalidate();
                 pictureBox1.Update();
+                buttonKadr[nomerKadra].Image = tempDraw;
             }
         }
 
@@ -100,10 +107,6 @@ namespace FocusGif
 
         private void button8_Click(object sender, EventArgs e)
         {
-            DialogResult D = colorDialog1.ShowDialog();
-            if (D == System.Windows.Forms.DialogResult.OK)
-                CurrentColor = colorDialog1.Color;
-            button8.BackColor = colorDialog1.Color;
 
         }
 
@@ -198,7 +201,6 @@ namespace FocusGif
             button5.Enabled = true;
             button6.Enabled = true;
             button7.Enabled = true;
-            button8.Enabled = true;
             button9.Enabled = true;
             button10.Enabled = true;
             button11.Enabled = true;
@@ -215,7 +217,6 @@ namespace FocusGif
                 nomerKadra = 0;
                 createProjectS = 1;
                 snapshot = new Bitmap(pictureBox1.Width, pictureBox1.Height);
-                button8.BackColor = Color.Black;
                 for (int x = 0; x < snapshot.Width; x++)
                 {
                     for (int y = 0; y < snapshot.Height; y++)
@@ -475,6 +476,20 @@ namespace FocusGif
                 createProject();
             }
             
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+            Label lb = sender as Label;
+            colorDialog1.Color = lb.BackColor;
+            if (colorDialog1.ShowDialog() == DialogResult.OK)
+                lb.BackColor = colorDialog1.Color;
+        }
+
+        private void label1_BackColorChanged(object sender, EventArgs e)
+        {
+            CurrentColor = label1.BackColor;
+            label1.Invalidate();
         }
     }
 
