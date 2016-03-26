@@ -14,7 +14,7 @@ namespace FocusGif
 {
     public partial class Form1 : Form
     {
-        int x1;
+        int x1, X1Zaliv, Y1Zaliv;
         int y1;
         int x2;
         int y2;
@@ -22,7 +22,7 @@ namespace FocusGif
         Color LasticColor = Color.White;
         Bitmap snapshot;
         Bitmap tempDraw;
-        bool MouseD, OffOn = false;
+        bool MouseD, OffOn = false, selected = false;
         int sizePen, selectedTool;
         object kadr;
         int nomerKadra = 0, nomerKadra2 = 0, createProjectS = 0;
@@ -59,10 +59,13 @@ namespace FocusGif
             }
             else
             {
-                x1 = e.X;
-                y1 = e.Y;
-                tempDraw = (Bitmap)snapshot.Clone();
-                MouseD = true;
+                if (!selected)
+                {
+                    x1 = e.X;
+                    y1 = e.Y;
+                    tempDraw = (Bitmap)snapshot.Clone();
+                    MouseD = true;
+                }
             }
             if (Control.ModifierKeys == Keys.Alt)
             {
@@ -98,16 +101,13 @@ namespace FocusGif
         private void button7_Click(object sender, EventArgs e)
         {
             selectedTool = 1;
+            selected = false;
         }
 
         private void button6_Click(object sender, EventArgs e)
         {
             selectedTool = 0;
-        }
-
-        private void button8_Click(object sender, EventArgs e)
-        {
-
+            selected = false;
         }
 
         private void button9_Click(object sender, EventArgs e)
@@ -127,7 +127,7 @@ namespace FocusGif
 
         private void button5_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("(", "Упс", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            selected = true;
         }
 
         private void pictureBox1_Paint(object sender, PaintEventArgs e)
@@ -139,7 +139,6 @@ namespace FocusGif
                     {
                         Graphics g = Graphics.FromImage(tempDraw);
                         Pen p = new Pen(CurrentColor);
-                        g.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
                         switch (sizePen)
                         {
                             case 1:
@@ -167,7 +166,6 @@ namespace FocusGif
                     {
                         Graphics g = Graphics.FromImage(tempDraw);
                         Pen p2 = new Pen(LasticColor);
-                        g.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
                         switch (sizePen)
                         {
                             case 1:
@@ -328,6 +326,56 @@ namespace FocusGif
             createButtonForKadr();
         }
 
+        private void zalivka()
+        {
+            Point[] Pt = new Point[pictureBox1.Width * pictureBox1.Height];
+            Color c = tempDraw.GetPixel(X1Zaliv, Y1Zaliv);
+            int i = 0;
+            int iProhod = i;
+            int iS = i;
+            Pt[i] = new Point(X1Zaliv, Y1Zaliv);
+            tempDraw.SetPixel(X1Zaliv, Y1Zaliv, CurrentColor);
+            while (iProhod <= i)
+            {
+                if ((Pt[iProhod].X + 1) < pictureBox1.Width)
+                    if (tempDraw.GetPixel(Pt[iProhod].X + 1, Pt[iProhod].Y) == c)
+                    {
+                        i++;
+                        iS++;
+                        Pt[i] = new Point((Pt[iProhod].X + 1), Pt[iProhod].Y);
+                        tempDraw.SetPixel((Pt[iProhod].X + 1), Pt[iProhod].Y, CurrentColor);
+                    }
+                if (Pt[iProhod].X - 1 >= 0)
+                    if (tempDraw.GetPixel((Pt[iProhod].X - 1), Pt[iProhod].Y) == c)
+                    {
+                        i++;
+                        iS++;
+                        Pt[i] = new Point((Pt[iProhod].X - 1), Pt[iProhod].Y);
+                        tempDraw.SetPixel((Pt[iProhod].X - 1), Pt[iProhod].Y, CurrentColor);
+                    }
+                if (Pt[iProhod].Y + 1 < pictureBox1.Height)
+                    if (tempDraw.GetPixel(Pt[iProhod].X, Pt[iProhod].Y + 1) == c)
+                    {
+                        i++;
+                        iS++;
+                        Pt[i] = new Point(Pt[iProhod].X, Pt[iProhod].Y + 1);
+                        tempDraw.SetPixel(Pt[iProhod].X, Pt[iProhod].Y + 1, CurrentColor);
+                    }
+                if (Pt[iProhod].Y - 1 >= 0)
+                    if (tempDraw.GetPixel(Pt[iProhod].X, Pt[iProhod].Y - 1) == c)
+                    {
+                        i++;
+                        iS++;
+                        Pt[i] = new Point(Pt[iProhod].X, Pt[iProhod].Y - 1);
+                        tempDraw.SetPixel(Pt[iProhod].X, Pt[iProhod].Y - 1, CurrentColor);
+                    }
+                iS--;
+                iProhod++;
+
+            }
+            pictureBox1.Image = tempDraw;
+        }
+
         int currentImage = 0;
         private void timer1_Tick(object sender, EventArgs e)
         {
@@ -346,6 +394,7 @@ namespace FocusGif
 
         private void button17_Click(object sender, EventArgs e)
         {
+            //button1.BackgroundImage = Properties.Resources.a_6351e0262;
             if (OffOn == false)
             {
                 timer1.Enabled = true;
@@ -490,6 +539,19 @@ namespace FocusGif
         {
             CurrentColor = label1.BackColor;
             label1.Invalidate();
+        }
+
+        private void pictureBox1_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (selected == true)
+            {
+                X1Zaliv = e.X;
+                Y1Zaliv = e.Y;
+                if (tempDraw.GetPixel(X1Zaliv, Y1Zaliv) != CurrentColor)
+                {
+                    zalivka();
+                }
+            }
         }
     }
 
