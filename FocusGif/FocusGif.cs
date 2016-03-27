@@ -18,6 +18,7 @@ namespace FocusGif
         int y1;
         int x2;
         int y2;
+        string path;
         Color CurrentColor = Color.Black;
         Color LasticColor = Color.White;
         Bitmap snapshot;
@@ -59,7 +60,7 @@ namespace FocusGif
             }
             else
             {
-                if (!selected)
+                if (!selected && createProjectS == 1)
                 {
                     x1 = e.X;
                     y1 = e.Y;
@@ -91,29 +92,17 @@ namespace FocusGif
 
         private void pictureBox1_MouseUp(object sender, MouseEventArgs e)
         {
-            MouseD = false;
-            snapshot = (Bitmap)tempDraw.Clone();
-            bitMapList[nomerKadra] = tempDraw;
-            imageList1.Images[nomerKadra] = new Bitmap(tempDraw, imageList1.ImageSize);
-            buttonKadr[nomerKadra].Image = imageList1.Images[nomerKadra];
-        }
-
-        private void button7_Click(object sender, EventArgs e)
-        {
-            selectedTool = 1;
-            selected = false;
-        }
-
-        private void button10_Click(object sender, EventArgs e)
-        {
+            if (MouseD || selected)
+            {
+                snapshot = (Bitmap)tempDraw.Clone();
+                bitMapList[nomerKadra] = tempDraw;
+                imageList1.Images[nomerKadra] = new Bitmap(tempDraw, imageList1.ImageSize);
+                buttonKadr[nomerKadra].Image = imageList1.Images[nomerKadra];
+                MouseD = false;
+            }
             
         }
-
-        private void button11_Click(object sender, EventArgs e)
-        {
-            
-        }
-
+        
         private void pictureBox1_Paint(object sender, PaintEventArgs e)
         {
             switch (selectedTool)
@@ -207,7 +196,7 @@ namespace FocusGif
         private void createButtonForKadr()
         {
             Button Mutton = new Button();
-            Mutton.Size = new Size(100, 80);
+            Mutton.Size = new Size(60, 35);
             Mutton.Image = imageList1.Images[nomerKadra];
             Mutton.Click += new EventHandler(button_Click);
             Mutton.TabIndex = nomerKadra;
@@ -232,7 +221,7 @@ namespace FocusGif
             pictureBox1.Image = bitMapList[inKadra];
 
         }
-        string path;
+       
 
         private void gif()
     {
@@ -348,14 +337,11 @@ namespace FocusGif
             selected = false;
         }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
 
         private void label4_Click(object sender, EventArgs e)
         {
-
+            selectedTool = 1;
+            selected = false;
         }
 
         private void label5_Click(object sender, EventArgs e)
@@ -433,6 +419,11 @@ namespace FocusGif
                 currentImage = 0;
 
             }
+        }
+
+        private void label17_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
 
         private void label14_Click(object sender, EventArgs e)
