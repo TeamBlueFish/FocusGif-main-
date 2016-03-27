@@ -82,40 +82,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\filesave_4813.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\filesave_1.bmp" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\paintcan_7788.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\inode-directory.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\pencil04.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\pencil041.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\w128h1281338911586eraser.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\w128h1281338911586eraser1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\editFile.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\editFile1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\editF.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\korzina.png" />
+    <Folder Include="Resources\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

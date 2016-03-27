@@ -104,30 +104,14 @@ namespace FocusGif
             selected = false;
         }
 
-        private void button6_Click(object sender, EventArgs e)
-        {
-            selectedTool = 0;
-            selected = false;
-        }
-
-        private void button9_Click(object sender, EventArgs e)
-        {
-            sizePen = 1;   // размер карандаша
-        }
-
         private void button10_Click(object sender, EventArgs e)
         {
-            sizePen = 5;   // размер карандаша
+            
         }
 
         private void button11_Click(object sender, EventArgs e)
         {
-            sizePen = 10;   // размер карандаша
-        }
-
-        private void button5_Click(object sender, EventArgs e)
-        {
-            selected = true;
+            
         }
 
         private void pictureBox1_Paint(object sender, PaintEventArgs e)
@@ -191,23 +175,6 @@ namespace FocusGif
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            button2.Enabled = true;
-            button3.Enabled = true;
-            button4.Enabled = true;
-            button5.Enabled = true;
-            button6.Enabled = true;
-            button7.Enabled = true;
-            button9.Enabled = true;
-            button10.Enabled = true;
-            button11.Enabled = true;
-            button12.Enabled = true;
-            button17.Enabled = true;
-            button18.Enabled = true;
-            createProject();
-        }
-
         private void createProject()
         {
             if (createProjectS == 0)
@@ -266,17 +233,6 @@ namespace FocusGif
 
         }
         string path;
-        private void button3_Click(object sender, EventArgs e)
-        {
-            SaveFileDialog sfd = new SaveFileDialog();
-            sfd.DefaultExt = "gif";
-            sfd.Filter = "Image Files(*.gif)|*.GIF|All files (*.*)|*.*"; 
-            if (sfd.ShowDialog() == DialogResult.OK)
-            {
-                path = sfd.FileName;
-                gif();
-            }
-        }
 
         private void gif()
     {
@@ -290,17 +246,6 @@ namespace FocusGif
             }
             gif.Finish();
     }
-        private void button2_Click(object sender, EventArgs e)
-        {
-            OpenFileDialog open_dialog = new OpenFileDialog();
-            DialogResult dr = open_dialog.ShowDialog();
-            open_dialog.Filter = "Image Files(*.BMP;*.JPG;*.GIF;*.PNG)|*.BMP;*.JPG;*.GIF;*.PNG|All files (*.*)|*.*";
-        }
-
-        private void button12_Click(object sender, EventArgs e)
-        {
-            createKadr();
-        }
 
         private void createKadr()
         {
@@ -392,7 +337,77 @@ namespace FocusGif
             timer1.Interval = trackBar1.Value;
         }
 
-        private void button17_Click(object sender, EventArgs e)
+        private void label2_Click(object sender, EventArgs e)
+        {
+            selected = true;
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+            selectedTool = 0;
+            selected = false;
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+            sizePen = 1;   // размер карандаша
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+            sizePen = 5;   // размер карандаша
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+            sizePen = 10;   // размер карандаша
+        }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+            createProject();
+        }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog open_dialog = new OpenFileDialog();
+            DialogResult dr = open_dialog.ShowDialog();
+            open_dialog.Filter = "Image Files(*.BMP;*.JPG;*.GIF;*.PNG)|*.BMP;*.JPG;*.GIF;*.PNG|All files (*.*)|*.*";
+        }
+
+        private void label10_Click(object sender, EventArgs e)
+        {
+            SaveFileDialog sfd = new SaveFileDialog();
+            sfd.DefaultExt = "gif";
+            sfd.Filter = "Image Files(*.gif)|*.GIF|All files (*.*)|*.*";
+            if (sfd.ShowDialog() == DialogResult.OK)
+            {
+                path = sfd.FileName;
+                gif();
+            }
+        }
+
+        private void label11_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label13_Click(object sender, EventArgs e)
+        {
+            createKadr();
+        }
+
+        private void label15_Click(object sender, EventArgs e)
         {
             //button1.BackgroundImage = Properties.Resources.a_6351e0262;
             if (OffOn == false)
@@ -420,19 +435,36 @@ namespace FocusGif
             }
         }
 
-        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        private void label14_Click(object sender, EventArgs e)
         {
-            if (createProjectS == 1)
+            if (MessageBox.Show("Вы действительно хотите очистить полосу кадров?", "Упс",
+                   MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
-                if (MessageBox.Show("Проект не сохранен! Выйти без сохранения?", "Упс",
-                   MessageBoxButtons.YesNo) == DialogResult.No)
+                for (int i = nomerKadra2; i > -1; i--)
                 {
-                    e.Cancel = true;
+                    nomerKadra = i;
+                    Button btn = (Button)buttonKadr[i];
+                    Bitmap kas = bitMapList[nomerKadra];
+                    if (flowLayoutPanel1.Controls.Contains(btn))
+                    {
+                        btn.Click -= new EventHandler(button_Click);
+                        flowLayoutPanel1.Controls.Remove(btn);
+                        btn.Dispose();
+                        imageList1.Images.RemoveAt(btn.TabIndex);
+                        bitMapList.Remove(kas);
+                        nomerKadra2--;
+                    }
                 }
+
+
+                izmenenie_poryadka();
+                createProjectS = 0;
+                nomerKadra2 = 0;
+                createProject();
             }
         }
 
-        private void button18_Click(object sender, EventArgs e)
+        private void label12_Click(object sender, EventArgs e)
         {
             Button btn = (Button)kadr;
             if (nomerKadra2 != 0)
@@ -481,6 +513,18 @@ namespace FocusGif
             }
         }
 
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (createProjectS == 1)
+            {
+                if (MessageBox.Show("Проект не сохранен! Выйти без сохранения?", "Упс",
+                   MessageBoxButtons.YesNo) == DialogResult.No)
+                {
+                    e.Cancel = true;
+                }
+            }
+        }
+
         void izmenenie_poryadka()
         {
             for (int j = nomerKadra; j < (nomerKadra2 + 2); j++)
@@ -495,36 +539,6 @@ namespace FocusGif
                 but.TabIndex = (ser - 1);
                 but.Text = (ser).ToString();
             }
-        }
-
-        private void button19_Click(object sender, EventArgs e)
-        {
-            if (MessageBox.Show("Вы действительно хотите очистить полосу кадров?", "Упс",
-                   MessageBoxButtons.YesNo) == DialogResult.Yes)
-            {
-                for (int i = nomerKadra2; i > -1; i--)
-                {
-                    nomerKadra = i;
-                    Button btn = (Button)buttonKadr[i];
-                    Bitmap kas = bitMapList[nomerKadra];
-                    if (flowLayoutPanel1.Controls.Contains(btn))
-                    {
-                        btn.Click -= new EventHandler(button_Click);
-                        flowLayoutPanel1.Controls.Remove(btn);
-                        btn.Dispose();
-                        imageList1.Images.RemoveAt(btn.TabIndex);
-                        bitMapList.Remove(kas);
-                        nomerKadra2--;
-                    }
-                }
-
-
-                izmenenie_poryadka();
-                createProjectS = 0;
-                nomerKadra2 = 0;
-                createProject();
-            }
-            
         }
 
         private void label1_Click(object sender, EventArgs e)
