@@ -193,6 +193,16 @@ namespace FocusGif.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _E9CE164B28455ACC3EEEAF30581FE450BA25B85836D17FD8CB_pimgpsh_fullsize_distr {
+            get {
+                object obj = ResourceManager.GetObject("^E9CE164B28455ACC3EEEAF30581FE450BA25B85836D17FD8CB^pimgpsh_fullsize_distr", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _EB654EDF7AA8F195D77FA1B0A7B0F636103E0A580D64F6AF7F_pimgpsh_fullsize_distr {
             get {
                 object obj = ResourceManager.GetObject("^EB654EDF7AA8F195D77FA1B0A7B0F636103E0A580D64F6AF7F^pimgpsh_fullsize_distr", resourceCulture);

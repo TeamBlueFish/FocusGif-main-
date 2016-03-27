@@ -18,7 +18,9 @@ namespace FocusGif
         int y1;
         int x2;
         int y2;
+        int dr;
         string path;
+        double SpeedDouble;
         Color CurrentColor = Color.Black;
         Color LasticColor = Color.White;
         Bitmap snapshot;
@@ -37,6 +39,7 @@ namespace FocusGif
         public Form1()
         {
             InitializeComponent();
+            //textBox1.Text = "1";
         }
 
         private void pictureBox1_MouseMove(object sender, MouseEventArgs e)
@@ -227,7 +230,7 @@ namespace FocusGif
     {
             AnimatedGifEncoder gif = new AnimatedGifEncoder();
             gif.Start(path);
-            gif.SetDelay(500);   
+            gif.SetDelay(dr);   
             gif.SetRepeat(0);
             for (int i = 0, count = nomerKadra2 + 1; i < count; i++)
             {
@@ -323,7 +326,7 @@ namespace FocusGif
 
         private void trackBar1_Scroll(object sender, EventArgs e)
         {
-            timer1.Interval = trackBar1.Value;
+            
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -335,6 +338,7 @@ namespace FocusGif
         {
             selectedTool = 0;
             selected = false;
+            textBox1.TabStop = false;
         }
 
 
@@ -361,6 +365,7 @@ namespace FocusGif
 
         private void label8_Click(object sender, EventArgs e)
         {
+            //textBox1.Enabled = true;
             createProject();
         }
 
@@ -373,6 +378,11 @@ namespace FocusGif
 
         private void label10_Click(object sender, EventArgs e)
         {
+            
+        }
+
+        private void label11_Click(object sender, EventArgs e)
+        {
             SaveFileDialog sfd = new SaveFileDialog();
             sfd.DefaultExt = "gif";
             sfd.Filter = "Image Files(*.gif)|*.GIF|All files (*.*)|*.*";
@@ -383,11 +393,6 @@ namespace FocusGif
             }
         }
 
-        private void label11_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void label13_Click(object sender, EventArgs e)
         {
             createKadr();
@@ -395,7 +400,9 @@ namespace FocusGif
 
         private void label15_Click(object sender, EventArgs e)
         {
-            //button1.BackgroundImage = Properties.Resources.a_6351e0262;
+            SpeedDouble = Convert.ToDouble(textBox1.Text);
+            dr = (int)(1000/ SpeedDouble);
+            timer1.Interval = dr;
             if (OffOn == false)
             {
                 timer1.Enabled = true;
@@ -443,6 +450,17 @@ namespace FocusGif
         private void Form1_MouseUp(object sender, MouseEventArgs e)
         {
             press = false;
+        }
+
+        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar <= 47 || e.KeyChar >= 58) && e.KeyChar != 8)
+                e.Handled = true;
+        }
+
+        private void textBox1_Click(object sender, EventArgs e)
+        {
+            textBox1.Enabled = true;
         }
 
         private void label14_Click(object sender, EventArgs e)
