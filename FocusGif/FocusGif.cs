@@ -425,6 +425,25 @@ namespace FocusGif
         {
             this.Close();
         }
+        bool press = false; Point n = new Point(0, 0);
+        private void Form1_MouseDown(object sender, MouseEventArgs e)
+        {
+            press = true; n = new Point(e.X, e.Y);
+        }
+
+        private void Form1_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (press)
+            {
+                Point P = this.PointToScreen(new Point(e.X, e.Y));
+                this.Location = new Point(P.X - n.X, P.Y - n.Y);
+            }
+        }
+
+        private void Form1_MouseUp(object sender, MouseEventArgs e)
+        {
+            press = false;
+        }
 
         private void label14_Click(object sender, EventArgs e)
         {

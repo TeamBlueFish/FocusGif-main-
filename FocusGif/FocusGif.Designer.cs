@@ -52,7 +52,6 @@
             this.label15 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
-            this.hScrollBar1 = new System.Windows.Forms.HScrollBar();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -123,7 +122,7 @@
             // 
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Image = global::FocusGif.Properties.Resources._A448FC9A235659A949B9D465A5A4D3448A9E9CECEC5719A103_pimgpsh_fullsize_distr;
-            this.label2.Location = new System.Drawing.Point(322, 527);
+            this.label2.Location = new System.Drawing.Point(322, 530);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(40, 40);
             this.label2.TabIndex = 21;
@@ -133,7 +132,7 @@
             // 
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Image = global::FocusGif.Properties.Resources._EE6889E26C01738CCB1EBA190AEBF10CC41ACE9D5F4D042269_pimgpsh_fullsize_distr;
-            this.label3.Location = new System.Drawing.Point(239, 527);
+            this.label3.Location = new System.Drawing.Point(239, 530);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(40, 40);
             this.label3.TabIndex = 22;
@@ -143,7 +142,7 @@
             // 
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Image = global::FocusGif.Properties.Resources._A9486D12671EDCAF2685E75D5499B6547E71F25D05775E50F9_pimgpsh_fullsize_distr;
-            this.label4.Location = new System.Drawing.Point(276, 527);
+            this.label4.Location = new System.Drawing.Point(276, 530);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(40, 40);
             this.label4.TabIndex = 23;
@@ -281,13 +280,6 @@
             this.label17.TabIndex = 36;
             this.label17.Click += new System.EventHandler(this.label17_Click);
             // 
-            // hScrollBar1
-            // 
-            this.hScrollBar1.Location = new System.Drawing.Point(505, 483);
-            this.hScrollBar1.Name = "hScrollBar1";
-            this.hScrollBar1.Size = new System.Drawing.Size(318, 17);
-            this.hScrollBar1.TabIndex = 38;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -296,7 +288,6 @@
             this.BackgroundImage = global::FocusGif.Properties.Resources.FG_fon;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(835, 575);
-            this.Controls.Add(this.hScrollBar1);
             this.Controls.Add(this.label17);
             this.Controls.Add(this.label16);
             this.Controls.Add(this.label15);
@@ -321,6 +312,9 @@
             this.Name = "Form1";
             this.Text = "FocusGif";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
+            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseMove);
+            this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseUp);
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
@@ -353,7 +347,6 @@
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.HScrollBar hScrollBar1;
     }
 }
 
