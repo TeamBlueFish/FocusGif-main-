@@ -124,23 +124,32 @@
   <data name="editFile1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\editFile1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="12" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\12.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="^80C11341ED69E6943FA265666EAAB171FFA0B230771F5D69BF^pimgpsh_fullsize_distr" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\^80C11341ED69E6943FA265666EAAB171FFA0B230771F5D69BF^pimgpsh_fullsize_distr.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="7" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\7.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="filesave_4813" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\filesave_4813.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="^7DEDB9E87002A3DA5E2F0C63A336ADEF64D525C2D17C547F34^pimgpsh_fullsize_distr" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\^7DEDB9E87002A3DA5E2F0C63A336ADEF64D525C2D17C547F34^pimgpsh_fullsize_distr.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="^80C11341ED69E6943FA265666EAAB171FFA0B230771F5D69BF^pimgpsh_fullsize_distr1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\^80C11341ED69E6943FA265666EAAB171FFA0B230771F5D69BF^pimgpsh_fullsize_distr1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="^BA732C2EB2E08867FF1387BC687EFF2DDC1723AD181FC58960^pimgpsh_fullsize_distr" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\^BA732C2EB2E08867FF1387BC687EFF2DDC1723AD181FC58960^pimgpsh_fullsize_distr.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="^EE6889E26C01738CCB1EBA190AEBF10CC41ACE9D5F4D042269^pimgpsh_fullsize_distr" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\^EE6889E26C01738CCB1EBA190AEBF10CC41ACE9D5F4D042269^pimgpsh_fullsize_distr.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="^80C11341ED69E6943FA265666EAAB171FFA0B230771F5D69BF^pimgpsh_fullsize_distr1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\^80C11341ED69E6943FA265666EAAB171FFA0B230771F5D69BF^pimgpsh_fullsize_distr1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="10" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\10.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="editFile" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\editFile.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -151,11 +160,20 @@
   <data name="inode-directory" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\inode-directory.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="^E9CE164B28455ACC3EEEAF30581FE450BA25B85836D17FD8CB^pimgpsh_fullsize_distr" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\^E9CE164B28455ACC3EEEAF30581FE450BA25B85836D17FD8CB^pimgpsh_fullsize_distr.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="9" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\9.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="^40AB53C03AB452605D2A3B5F2B52BF6280A7CFEDEE119BFB29^pimgpsh_fullsize_distr" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\^40AB53C03AB452605D2A3B5F2B52BF6280A7CFEDEE119BFB29^pimgpsh_fullsize_distr.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="w128h1281338911586eraser" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\w128h1281338911586eraser.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="13" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\13.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="pencil041" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pencil041.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -166,14 +184,20 @@
   <data name="FG-fon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\FG-fon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="^31B03798BE671DE10A1D7D0932C27533D01AE2FE282BE64957^pimgpsh_fullsize_distr" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\^31B03798BE671DE10A1D7D0932C27533D01AE2FE282BE64957^pimgpsh_fullsize_distr.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="^EB654EDF7AA8F195D77FA1B0A7B0F636103E0A580D64F6AF7F^pimgpsh_fullsize_distr" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\^EB654EDF7AA8F195D77FA1B0A7B0F636103E0A580D64F6AF7F^pimgpsh_fullsize_distr.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="8" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\8.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="editF" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\editF.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="filesave_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\filesave_1.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="6" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\6.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="14" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\14.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="pencil04" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pencil04.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -184,17 +208,35 @@
   <data name="^E06C44F2549294FF5473A791A08277C494C2758F851EFE3A89^pimgpsh_fullsize_distr" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\^E06C44F2549294FF5473A791A08277C494C2758F851EFE3A89^pimgpsh_fullsize_distr.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="korzina" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\korzina.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="^994A6824B9E0BCC96B48C4DB6F50A10C7F707146494FE96B29^pimgpsh_fullsize_distr" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\^994A6824B9E0BCC96B48C4DB6F50A10C7F707146494FE96B29^pimgpsh_fullsize_distr.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="^7DEDB9E87002A3DA5E2F0C63A336ADEF64D525C2D17C547F34^pimgpsh_fullsize_distr" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\^7DEDB9E87002A3DA5E2F0C63A336ADEF64D525C2D17C547F34^pimgpsh_fullsize_distr.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="w128h1281338911586eraser1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\w128h1281338911586eraser1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="^EB654EDF7AA8F195D77FA1B0A7B0F636103E0A580D64F6AF7F^pimgpsh_fullsize_distr" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\^EB654EDF7AA8F195D77FA1B0A7B0F636103E0A580D64F6AF7F^pimgpsh_fullsize_distr.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="11" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\11.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="filesave_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\filesave_1.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="^31B03798BE671DE10A1D7D0932C27533D01AE2FE282BE64957^pimgpsh_fullsize_distr" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\^31B03798BE671DE10A1D7D0932C27533D01AE2FE282BE64957^pimgpsh_fullsize_distr.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="^6E090658923AF21859AFD30EFDADC968F9E256A83577F484A9^pimgpsh_fullsize_distr" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\^6E090658923AF21859AFD30EFDADC968F9E256A83577F484A9^pimgpsh_fullsize_distr.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -202,7 +244,7 @@
   <data name="paintcan_7788" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\paintcan_7788.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="^E9CE164B28455ACC3EEEAF30581FE450BA25B85836D17FD8CB^pimgpsh_fullsize_distr" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\^E9CE164B28455ACC3EEEAF30581FE450BA25B85836D17FD8CB^pimgpsh_fullsize_distr.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="15" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\15.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

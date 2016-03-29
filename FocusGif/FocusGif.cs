@@ -18,7 +18,7 @@ namespace FocusGif
         int y1;
         int x2;
         int y2;
-        int dr;
+        int dr = 500;
         string path;
         double SpeedDouble;
         Color CurrentColor = Color.Black;
@@ -324,11 +324,6 @@ namespace FocusGif
             }
         }
 
-        private void trackBar1_Scroll(object sender, EventArgs e)
-        {
-            
-        }
-
         private void label2_Click(object sender, EventArgs e)
         {
             selected = true;
@@ -340,7 +335,6 @@ namespace FocusGif
             selected = false;
             textBox1.TabStop = false;
         }
-
 
         private void label4_Click(object sender, EventArgs e)
         {
@@ -377,11 +371,6 @@ namespace FocusGif
         }
 
         private void label10_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void label11_Click(object sender, EventArgs e)
         {
             SaveFileDialog sfd = new SaveFileDialog();
             sfd.DefaultExt = "gif";
