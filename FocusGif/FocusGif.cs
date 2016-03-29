@@ -380,6 +380,17 @@ namespace FocusGif
 
         private void label8_Click(object sender, EventArgs e)
         {
+            label14.Enabled = true;
+            label12.Enabled = true;
+            label13.Enabled = true;
+            label15.Enabled = true;
+            label3.Enabled = true;
+            label4.Enabled = true;
+            label2.Enabled = true;
+            label5.Enabled = true;
+            label6.Enabled = true;
+            label7.Enabled = true;
+            label10.Enabled = true;
             saveF = true;
             label3.Image = Properties.Resources.y6 as Bitmap;
             label5.Image = Properties.Resources.y3 as Bitmap;
@@ -404,6 +415,17 @@ namespace FocusGif
                 open_dialog.Filter = "Image Files(*.GIF)|*.GIF";
                 if (open_dialog.ShowDialog() == DialogResult.OK)
                 {
+                    label14.Enabled = true;
+                    label12.Enabled = true;
+                    label13.Enabled = true;
+                    label15.Enabled = true;
+                    label3.Enabled = true;
+                    label4.Enabled = true;
+                    label2.Enabled = true;
+                    label5.Enabled = true;
+                    label6.Enabled = true;
+                    label7.Enabled = true;
+                    label10.Enabled = true;
                     if (createProjectS == 1)
                     {
                         for (int i = nomerKadra2; i > -1; i--)

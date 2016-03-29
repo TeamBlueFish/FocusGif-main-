@@ -51,7 +51,6 @@
             this.label16 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.hScrollBar1 = new System.Windows.Forms.HScrollBar();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -73,7 +72,7 @@
             this.flowLayoutPanel1.Location = new System.Drawing.Point(242, 446);
             this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(2);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(581, 45);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(581, 61);
             this.flowLayoutPanel1.TabIndex = 16;
             this.flowLayoutPanel1.WrapContents = false;
             // 
@@ -105,6 +104,7 @@
             // label2
             // 
             this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Enabled = false;
             this.label2.Image = global::FocusGif.Properties.Resources._12;
             this.label2.Location = new System.Drawing.Point(331, 520);
             this.label2.Name = "label2";
@@ -115,6 +115,7 @@
             // label3
             // 
             this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Enabled = false;
             this.label3.Image = global::FocusGif.Properties.Resources._10;
             this.label3.Location = new System.Drawing.Point(239, 520);
             this.label3.Name = "label3";
@@ -125,6 +126,7 @@
             // label4
             // 
             this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Enabled = false;
             this.label4.Image = global::FocusGif.Properties.Resources._11;
             this.label4.Location = new System.Drawing.Point(285, 520);
             this.label4.Name = "label4";
@@ -135,6 +137,7 @@
             // label5
             // 
             this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Enabled = false;
             this.label5.Image = global::FocusGif.Properties.Resources._13;
             this.label5.Location = new System.Drawing.Point(388, 527);
             this.label5.Name = "label5";
@@ -145,6 +148,7 @@
             // label6
             // 
             this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Enabled = false;
             this.label6.Image = global::FocusGif.Properties.Resources._14;
             this.label6.Location = new System.Drawing.Point(424, 527);
             this.label6.Name = "label6";
@@ -155,6 +159,7 @@
             // label7
             // 
             this.label7.BackColor = System.Drawing.Color.Transparent;
+            this.label7.Enabled = false;
             this.label7.Image = global::FocusGif.Properties.Resources._15;
             this.label7.Location = new System.Drawing.Point(460, 527);
             this.label7.Name = "label7";
@@ -185,6 +190,7 @@
             // label10
             // 
             this.label10.BackColor = System.Drawing.Color.Transparent;
+            this.label10.Enabled = false;
             this.label10.Image = global::FocusGif.Properties.Resources._5;
             this.label10.Location = new System.Drawing.Point(28, 198);
             this.label10.Name = "label10";
@@ -195,6 +201,7 @@
             // label12
             // 
             this.label12.BackColor = System.Drawing.Color.Transparent;
+            this.label12.Enabled = false;
             this.label12.Image = global::FocusGif.Properties.Resources._7;
             this.label12.Location = new System.Drawing.Point(142, 451);
             this.label12.Name = "label12";
@@ -205,6 +212,7 @@
             // label13
             // 
             this.label13.BackColor = System.Drawing.Color.Transparent;
+            this.label13.Enabled = false;
             this.label13.Image = global::FocusGif.Properties.Resources._8;
             this.label13.Location = new System.Drawing.Point(188, 451);
             this.label13.Name = "label13";
@@ -215,6 +223,7 @@
             // label14
             // 
             this.label14.BackColor = System.Drawing.Color.Transparent;
+            this.label14.Enabled = false;
             this.label14.Image = global::FocusGif.Properties.Resources._6;
             this.label14.Location = new System.Drawing.Point(105, 446);
             this.label14.Name = "label14";
@@ -225,6 +234,7 @@
             // label15
             // 
             this.label15.BackColor = System.Drawing.Color.Transparent;
+            this.label15.Enabled = false;
             this.label15.Image = global::FocusGif.Properties.Resources._9;
             this.label15.Location = new System.Drawing.Point(169, 498);
             this.label15.Name = "label15";
@@ -264,13 +274,6 @@
             this.textBox1.Click += new System.EventHandler(this.textBox1_Click);
             this.textBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
             // 
-            // hScrollBar1
-            // 
-            this.hScrollBar1.Location = new System.Drawing.Point(242, 493);
-            this.hScrollBar1.Name = "hScrollBar1";
-            this.hScrollBar1.Size = new System.Drawing.Size(581, 17);
-            this.hScrollBar1.TabIndex = 39;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -279,7 +282,6 @@
             this.BackgroundImage = global::FocusGif.Properties.Resources.riba;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(835, 566);
-            this.Controls.Add(this.hScrollBar1);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label17);
             this.Controls.Add(this.label16);
@@ -337,7 +339,6 @@
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.HScrollBar hScrollBar1;
     }
 }
 
