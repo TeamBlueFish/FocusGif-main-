@@ -18,15 +18,16 @@ namespace FocusGif
         int y1;
         int x2;
         int y2;
-        int dr = 500;
+        int dr;
         string path;
+        string outputPath;
         double SpeedDouble;
         Color CurrentColor = Color.Black;
         Color LasticColor = Color.White;
         Bitmap snapshot;
         Bitmap tempDraw;
-        bool MouseD, OffOn = false, selected = false;
-        int sizePen, selectedTool;
+        bool MouseD, OffOn = false, selected = false, openGif = true, saveF = true;
+        int sizePen = 1, selectedTool;
         object kadr;
         int nomerKadra = 0, nomerKadra2 = 0, createProjectS = 0;
         PictureBox pictureBox2 = new PictureBox();
@@ -39,7 +40,6 @@ namespace FocusGif
         public Form1()
         {
             InitializeComponent();
-            //textBox1.Text = "1";
         }
 
         private void pictureBox1_MouseMove(object sender, MouseEventArgs e)
@@ -65,6 +65,7 @@ namespace FocusGif
             {
                 if (!selected && createProjectS == 1)
                 {
+                    saveF = false;
                     x1 = e.X;
                     y1 = e.Y;
                     tempDraw = (Bitmap)snapshot.Clone();
@@ -83,6 +84,7 @@ namespace FocusGif
         {
             if (tempDraw != null)
             {
+                saveF = false;
                 Graphics g = Graphics.FromImage(tempDraw);
                 g.Clear(SystemColors.Window);
                 Graphics g2 = Graphics.FromImage(snapshot);
@@ -202,6 +204,7 @@ namespace FocusGif
             Mutton.Size = new Size(60, 35);
             Mutton.Image = imageList1.Images[nomerKadra];
             Mutton.Click += new EventHandler(button_Click);
+            //Mutton.MouseDown += new EventHandler(button_MouseDown);
             Mutton.TabIndex = nomerKadra;
             Mutton.Text = (nomerKadra+1).ToString();
             Mutton.TextAlign = ContentAlignment.TopRight;
@@ -212,6 +215,7 @@ namespace FocusGif
 
         void button_Click(object sender, EventArgs e)
         {
+            
             Button button = (Button)sender;
             kadr = sender;
             bitMapList[nomerKadra] = tempDraw;
@@ -224,7 +228,6 @@ namespace FocusGif
             pictureBox1.Image = bitMapList[inKadra];
 
         }
-       
 
         private void gif()
     {
@@ -326,11 +329,17 @@ namespace FocusGif
 
         private void label2_Click(object sender, EventArgs e)
         {
+            if (selectedTool == 0) label3.Image = Properties.Resources.x10 as Bitmap;
+            if (selectedTool == 1) label4.Image = Properties.Resources.x11 as Bitmap;
             selected = true;
+            label2.Image = Properties.Resources.y4 as Bitmap;
         }
 
         private void label3_Click(object sender, EventArgs e)
         {
+            if (selectedTool == 1) label4.Image = Properties.Resources.x11 as Bitmap;
+            if (selected) label2.Image = Properties.Resources.x12 as Bitmap;
+            label3.Image = Properties.Resources.y6 as Bitmap;
             selectedTool = 0;
             selected = false;
             textBox1.TabStop = false;
@@ -338,36 +347,105 @@ namespace FocusGif
 
         private void label4_Click(object sender, EventArgs e)
         {
+            if (selectedTool == 0) label3.Image = Properties.Resources.x10 as Bitmap;
+            if (selected) label2.Image = Properties.Resources.x12 as Bitmap;
             selectedTool = 1;
             selected = false;
+            label4.Image = Properties.Resources.y5 as Bitmap;
         }
 
         private void label5_Click(object sender, EventArgs e)
         {
+            if (sizePen == 5) label6.Image = Properties.Resources.x14 as Bitmap;
+            if (sizePen == 10) label7.Image = Properties.Resources.x15 as Bitmap;
             sizePen = 1;   // размер карандаша
+            label5.Image = Properties.Resources.y3 as Bitmap;
         }
 
         private void label6_Click(object sender, EventArgs e)
         {
+            if (sizePen == 1) label5.Image = Properties.Resources.x13 as Bitmap;
+            if (sizePen == 10) label7.Image = Properties.Resources.x15 as Bitmap;
             sizePen = 5;   // размер карандаша
+            label6.Image = Properties.Resources.y2 as Bitmap;
         }
 
         private void label7_Click(object sender, EventArgs e)
         {
+            if (sizePen == 1) label5.Image = Properties.Resources.x13 as Bitmap;
+            if (sizePen == 5) label6.Image = Properties.Resources.x14 as Bitmap;
             sizePen = 10;   // размер карандаша
+            label7.Image = Properties.Resources.y1 as Bitmap;
         }
 
         private void label8_Click(object sender, EventArgs e)
         {
-            //textBox1.Enabled = true;
+            saveF = true;
+            label3.Image = Properties.Resources.y6 as Bitmap;
+            label5.Image = Properties.Resources.y3 as Bitmap;
+            openGif = false;
             createProject();
         }
 
         private void label9_Click(object sender, EventArgs e)
         {
-            OpenFileDialog open_dialog = new OpenFileDialog();
-            DialogResult dr = open_dialog.ShowDialog();
-            open_dialog.Filter = "Image Files(*.BMP;*.JPG;*.GIF;*.PNG)|*.BMP;*.JPG;*.GIF;*.PNG|All files (*.*)|*.*";
+            if (createProjectS == 1)
+            {
+                if (MessageBox.Show("Создание нового проекта уничтожит существующий. Вы хотите продолжить?", "Упс",
+                   MessageBoxButtons.YesNo) == DialogResult.Yes)
+                {
+                    openGif = true;
+                }
+            }
+
+            if (openGif)
+            {
+                OpenFileDialog open_dialog = new OpenFileDialog();
+                open_dialog.Filter = "Image Files(*.GIF)|*.GIF";
+                if (open_dialog.ShowDialog() == DialogResult.OK)
+                {
+                    if (createProjectS == 1)
+                    {
+                        for (int i = nomerKadra2; i > -1; i--)
+                        {
+                            nomerKadra = i;
+                            Button btn = (Button)buttonKadr[i];
+                            Bitmap kas = bitMapList[nomerKadra];
+                            if (flowLayoutPanel1.Controls.Contains(btn))
+                            {
+                                btn.Click -= new EventHandler(button_Click);
+                                flowLayoutPanel1.Controls.Remove(btn);
+                                btn.Dispose();
+                                imageList1.Images.RemoveAt(btn.TabIndex);
+                                bitMapList.Remove(kas);
+                                nomerKadra2--;
+                            }
+                            izmenenie_poryadka();
+                            createProjectS = 0;
+                            nomerKadra2 = 0;
+                        }
+                    }
+                    outputPath = open_dialog.FileName;
+
+                    GifDecoder gifDecoder = new GifDecoder();
+                    gifDecoder.Read(outputPath);
+                    createProjectS = 1;
+                    for (int i = 0, count = gifDecoder.GetFrameCount(); i < count; i++)
+                    {
+                        Image frame = gifDecoder.GetFrame(i);
+                        //pictureBox1.Width = frame.Width;
+                        //pictureBox1.Height = frame.Height;
+                        nomerKadra = i;
+                        nomerKadra2 = nomerKadra;
+                        bitMapList.Add((Bitmap)frame);
+                        imageList1.Images.Add((Bitmap)frame);
+                        snapshot = (Bitmap)frame;
+                        tempDraw = (Bitmap)snapshot.Clone();
+                        pictureBox1.Image = bitMapList[nomerKadra];
+                        createButtonForKadr();
+                    }
+                }
+            }
         }
 
         private void label10_Click(object sender, EventArgs e)
@@ -379,6 +457,7 @@ namespace FocusGif
             {
                 path = sfd.FileName;
                 gif();
+                saveF = true;
             }
         }
 
@@ -389,11 +468,19 @@ namespace FocusGif
 
         private void label15_Click(object sender, EventArgs e)
         {
-            SpeedDouble = Convert.ToDouble(textBox1.Text);
-            dr = (int)(1000/ SpeedDouble);
-            timer1.Interval = dr;
+            if (textBox1.Text == "")
+            {
+                dr = 500;
+            }
+            else
+            {
+                SpeedDouble = Convert.ToDouble(textBox1.Text);
+                dr = (int)(1000 / SpeedDouble);
+                timer1.Interval = dr;
+            }
             if (OffOn == false)
             {
+                label15.Image = Properties.Resources.y7 as Bitmap;
                 timer1.Enabled = true;
                 OffOn = true;
                 pictureBox2.Width = pictureBox1.Width;
@@ -408,6 +495,7 @@ namespace FocusGif
             }
             else
             {
+                label15.Image = Properties.Resources.x9 as Bitmap;
                 timer1.Enabled = false;
                 OffOn = false;
                 pictureBox2.Visible = false;
@@ -532,7 +620,7 @@ namespace FocusGif
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (createProjectS == 1)
+            if (createProjectS == 1 && saveF == false)
             {
                 if (MessageBox.Show("Проект не сохранен! Выйти без сохранения?", "Упс",
                    MessageBoxButtons.YesNo) == DialogResult.No)
@@ -574,6 +662,7 @@ namespace FocusGif
 
         private void pictureBox1_MouseClick(object sender, MouseEventArgs e)
         {
+            saveF = false;
             if (selected == true)
             {
                 X1Zaliv = e.X;

@@ -276,7 +276,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.BackgroundImage = global::FocusGif.Properties.Resources._16;
+            this.BackgroundImage = global::FocusGif.Properties.Resources.riba;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(835, 566);
             this.Controls.Add(this.hScrollBar1);

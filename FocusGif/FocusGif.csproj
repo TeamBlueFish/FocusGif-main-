@@ -175,6 +175,51 @@
   <ItemGroup>
     <None Include="Resources\15.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\riba.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\x9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\x10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\x11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\x12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\x13.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\x14.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\x15.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\y1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\y2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\y3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\y4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\y5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\y6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\y7.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
